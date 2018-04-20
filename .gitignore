@@ -1,0 +1,8 @@
+pyenv
+.vscode
+.pytest_cache
+report.html
+__pycache__
+assets
+keys.py
+
