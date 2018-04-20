@@ -19,3 +19,11 @@ class TestHome():
 
         assert home.pageTitle == 'Skookum - Contact'
         home.endTest()
+
+    def test_clickGetToKnowUs_Btn(self, setDriver):
+        home = HomePage(setDriver)
+        home.openPage()
+        home.clickGetToKnowUsBtn()
+
+        assert home.pageTitle == 'Skookum - About'
+        home.endTest()

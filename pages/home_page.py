@@ -17,11 +17,10 @@ class HomePage(BasePage):
 	# Getter Methods
 	def getLetsWorkTogetherBtn(self):
 		return self.driver.find_element(By.CSS_SELECTOR, _letsWorkTogetherBtn)
-
 	
-	# getGetToKnowUsBtn() {
-	# 	return this.driver.findElement(By.css(_getToKnowUsBtn));
-	# }
+	def getGetToKnowUsBtn(self):
+		return self.driver.find_element(By.CSS_SELECTOR, _getToKnowUsBtn)
+
 	# getViewServicesBtn(){
 	# 	return this.driver.findElement(By.css(_viewServicesBtn));
 	# }
@@ -40,10 +39,10 @@ class HomePage(BasePage):
 		self.getLetsWorkTogetherBtn().click()
 		self.verifyPageUpdatedTo('contact')
     
-	# async clickGetToKnowUsBtn() {
-	# 	this.getGetToKnowUsBtn().click();
-	# 	await this.verifyPageUpdatedTo('about');
-	# }
+	def clickGetToKnowUsBtn(self):
+		self.getGetToKnowUsBtn().click()
+		self.verifyPageUpdatedTo('about')
+
     
 	# async clickViewServicesBtn() {
 	# 	this.getViewServicesBtn().click();
