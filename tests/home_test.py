@@ -1,13 +1,21 @@
 import pytest
 from time import sleep
-from pages.base_page import BasePage
+from pages.home_page import HomePage
 
 
 @pytest.mark.usefixtures('setDriver')
 class TestHome():
     def test_open_homepage(self, setDriver):
-        home = BasePage(setDriver)
+        home = HomePage(setDriver)
         home.openPage()
 
         assert home.driver.title == 'Skookum - Strategy, Design, Development'
+        home.endTest()
+
+    def test_clickLetsWorkTogether_Btn(self, setDriver):
+        home = HomePage(setDriver)
+        home.openPage()
+        home.clickLetsWorkTogetherBtn()
+
+        assert home.pageTitle == 'Skookum - Contact'
         home.endTest()
