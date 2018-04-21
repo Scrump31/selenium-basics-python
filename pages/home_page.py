@@ -27,9 +27,9 @@ class HomePage(BasePage):
 	def getExploreTheCaseStudyPremierBtn(self):
 		return self.driver.find_element(By.CSS_SELECTOR, _exploreTheCaseStudyPremierBtn)
 	
-	# getExploreTheCaseStudyLibraryBtn(){
-	# 	return this.driver.findElement(By.css(_exploreTheCaseStudyLibraryBtn));
-	# }
+	def getExploreTheCaseStudyLibraryBtn(self):
+		return self.driver.find_element(By.CSS_SELECTOR, _exploreTheCaseStudyLibraryBtn)
+	
 	# getExploreTheCaseStudyHighPointBtn(){
 	# 	return this.driver.findElement(By.css(_exploreTheCaseStudyHighPointBtn));
 	# }
@@ -52,10 +52,9 @@ class HomePage(BasePage):
 		self.getExploreTheCaseStudyPremierBtn().click()
 		self.verifyPageUpdatedTo('premier')
     
-	# async clickExploreTheCaseStudyLibraryBtn() {
-	# 	this.getExploreTheCaseStudyLibraryBtn().click();
-	# 	await this.verifyPageUpdatedTo('library');
-	# }
+	def clickExploreTheCaseStudyLibraryBtn(self):
+		self.getExploreTheCaseStudyLibraryBtn().click()
+		self.verifyPageUpdatedTo('library')
     
 	# async clickExploreTheCaseStudyHighPointBtn() {
 	# 	this.getExploreTheCaseStudyHighPointBtn().click();
