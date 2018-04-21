@@ -30,9 +30,9 @@ class HomePage(BasePage):
 	def getExploreTheCaseStudyLibraryBtn(self):
 		return self.driver.find_element(By.CSS_SELECTOR, _exploreTheCaseStudyLibraryBtn)
 	
-	# getExploreTheCaseStudyHighPointBtn(){
-	# 	return this.driver.findElement(By.css(_exploreTheCaseStudyHighPointBtn));
-	# }
+	def getExploreTheCaseStudyHighPointBtn(self):
+		return self.driver.find_element(By.CSS_SELECTOR, _exploreTheCaseStudyHighPointBtn)
+
 
 	# Action Methods	
 	def clickLetsWorkTogetherBtn(self):
@@ -56,7 +56,6 @@ class HomePage(BasePage):
 		self.getExploreTheCaseStudyLibraryBtn().click()
 		self.verifyPageUpdatedTo('library')
     
-	# async clickExploreTheCaseStudyHighPointBtn() {
-	# 	this.getExploreTheCaseStudyHighPointBtn().click();
-	# 	await this.verifyPageUpdatedTo('high-point');
-	# }
+	def clickExploreTheCaseStudyHighPointBtn(self):
+		self.getExploreTheCaseStudyHighPointBtn().click()
+		self.verifyPageUpdatedTo('high-point')

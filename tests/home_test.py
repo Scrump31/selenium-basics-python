@@ -52,4 +52,10 @@ class TestHome():
         assert home.pageTitle == 'Case Study - Charlotte Mecklenburg Library'
         home.endTest()
 
+    def test_ExploreTheCaseStudyHighPoint_Btn(self, setDriver):
+        home = HomePage(setDriver)
+        home.openPage()
+        home.clickExploreTheCaseStudyHighPointBtn()
 
+        assert home.pageTitle == 'Case Study - High Point Market'
+        home.endTest()
