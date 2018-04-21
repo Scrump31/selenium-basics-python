@@ -24,9 +24,9 @@ class HomePage(BasePage):
 	def getViewServicesBtn(self):
 		return self.driver.find_element(By.CSS_SELECTOR, _viewServicesBtn)
 
-	# getExploreTheCaseStudyPremierBtn(){
-	# 	return this.driver.findElement(By.css(_exploreTheCaseStudyPremierBtn));
-	# }
+	def getExploreTheCaseStudyPremierBtn(self):
+		return self.driver.find_element(By.CSS_SELECTOR, _exploreTheCaseStudyPremierBtn)
+	
 	# getExploreTheCaseStudyLibraryBtn(){
 	# 	return this.driver.findElement(By.css(_exploreTheCaseStudyLibraryBtn));
 	# }
@@ -48,10 +48,9 @@ class HomePage(BasePage):
 		self.getViewServicesBtn().click()
 		self.verifyPageUpdatedTo('services')
     
-	# async clickExploreTheCaseStudyPremierBtn() {
-	# 	this.getExploreTheCaseStudyPremierBtn().click();
-	# 	await this.verifyPageUpdatedTo('premier');
-	# }
+	def clickExploreTheCaseStudyPremierBtn(self):
+		self.getExploreTheCaseStudyPremierBtn().click()
+		self.verifyPageUpdatedTo('premier')
     
 	# async clickExploreTheCaseStudyLibraryBtn() {
 	# 	this.getExploreTheCaseStudyLibraryBtn().click();

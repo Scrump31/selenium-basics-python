@@ -32,6 +32,16 @@ class TestHome():
         home = HomePage(setDriver)
         home.openPage()
         home.clickViewServicesBtn()
-        
+
         assert home.pageTitle == 'Skookum - Services'
         home.endTest()
+
+    def test_ExploreTheCaseStudyPremier_Btn(self, setDriver):
+        home = HomePage(setDriver)
+        home.openPage()
+        home.clickExploreTheCaseStudyPremierBtn()
+
+        assert home.pageTitle == 'Case Study - Premier Inc'
+        home.endTest()
+
+
