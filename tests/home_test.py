@@ -9,7 +9,7 @@ class TestHome():
         home = HomePage(setDriver)
         home.openPage()
 
-        assert home.driver.title == 'Skookum - Strategy, Design, Development'
+        assert home.pageTitle == 'Skookum - Strategy, Design, Development'
         home.endTest()
 
     def test_clickLetsWorkTogether_Btn(self, setDriver):
