@@ -2,7 +2,7 @@ import pytest
 from pages.footer_page import Footer
 
 
-@pytest.mark.usefixtures('setDriver')
+@pytest.mark.usefixtures('setDriver', 'endTest')
 class TestFooter():
     def test_careers_link(self, setDriver):
         footer = Footer(setDriver)

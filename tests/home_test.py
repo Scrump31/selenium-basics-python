@@ -3,14 +3,13 @@ from time import sleep
 from pages.home_page import HomePage
 
 
-@pytest.mark.usefixtures('setDriver')
+@pytest.mark.usefixtures('setDriver', 'endTest')
 class TestHome():
     def test_open_homepage(self, setDriver):
         home = HomePage(setDriver)
         home.openPage()
 
         assert home.pageTitle == 'Skookum - Strategy, Design, Development'
-        home.endTest()
 
     def test_clickLetsWorkTogether_Btn(self, setDriver):
         home = HomePage(setDriver)
@@ -18,7 +17,6 @@ class TestHome():
         home.clickLetsWorkTogetherBtn()
 
         assert home.pageTitle == 'Skookum - Contact'
-        home.endTest()
 
     def test_clickGetToKnowUs_Btn(self, setDriver):
         home = HomePage(setDriver)
@@ -26,7 +24,6 @@ class TestHome():
         home.clickGetToKnowUsBtn()
 
         assert home.pageTitle == 'Skookum - About'
-        home.endTest()
 
     def test_clickViewService_Btn(self, setDriver):
         home = HomePage(setDriver)
@@ -34,7 +31,6 @@ class TestHome():
         home.clickViewServicesBtn()
 
         assert home.pageTitle == 'Skookum - Services'
-        home.endTest()
 
     def test_ExploreTheCaseStudyPremier_Btn(self, setDriver):
         home = HomePage(setDriver)
@@ -42,7 +38,6 @@ class TestHome():
         home.clickExploreTheCaseStudyPremierBtn()
 
         assert home.pageTitle == 'Case Study - Premier Inc'
-        home.endTest()
 
     def test_ExploreTheCaseStudyLibrary_Btn(self, setDriver):
         home = HomePage(setDriver)
@@ -50,7 +45,6 @@ class TestHome():
         home.clickExploreTheCaseStudyLibraryBtn()
 
         assert home.pageTitle == 'Case Study - Charlotte Mecklenburg Library'
-        home.endTest()
 
     def test_ExploreTheCaseStudyHighPoint_Btn(self, setDriver):
         home = HomePage(setDriver)
@@ -58,4 +52,3 @@ class TestHome():
         home.clickExploreTheCaseStudyHighPointBtn()
 
         assert home.pageTitle == 'Case Study - High Point Market'
-        home.endTest()

@@ -50,6 +50,3 @@ class BasePage:
 
     def getCurrentPageTitle(self):
         return self.driver.title
-
-    def endTest(self):
-        return self.driver.quit()
