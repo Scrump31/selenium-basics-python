@@ -13,6 +13,10 @@ from selenium import webdriver
 import pytest
 from config.keys import browserstack_key
 
+@pytest.fixture
+def endTest(setDriver):
+    yield
+    return setDriver.quit()
 
 @pytest.fixture(scope='function')
 def setDriver(browser):
